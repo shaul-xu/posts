@@ -8,8 +8,8 @@ serve(
   async (req) => {
     const { pathname } = new URL(req.url)
 
-    if (pathname === '/') {
-      return new Response(await Deno.readFile(join(staticPath, 'index.html')))
+    if (pathname.endsWith === '/') {
+      return new Response(await Deno.readFile(join(pathname, 'index.html')))
     }
     return serveDir(req, { fsRoot: staticPath })
   },
