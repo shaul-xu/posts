@@ -9,7 +9,7 @@ serve(
     const { pathname } = new URL(req.url)
 
     if (pathname.endsWith === '/') {
-      return new Response(await Deno.readFile(join(pathname, 'index.html')))
+      return new Response(await Deno.readFile(join(pathname, '/index.html')))
     }
     return serveDir(req, { fsRoot: staticPath })
   },
