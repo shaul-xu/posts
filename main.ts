@@ -1,17 +1,16 @@
-import { serve } from 'https://deno.land/std@0.140.0/http/server.ts'
-import { serveDir } from 'https://deno.land/std@0.140.0/http/file_server.ts'
-import { join } from 'https://deno.land/std@0.165.0/path/mod.ts'
+import { Application } from "https://deno.land/x/oak/mod.ts";
 
-const staticPath = Deno.cwd()
+const app = new Application();
+app.use(async (ctx) => {
+  try {
+    await ctx.send({
+      root: Deno.cwd(),
+      index: "index.html",
+    });
+  } catch {
+    ctx.response.status = 404;
+    ctx.response.body = "404 File not found";
+  }
+});
 
-serve(
-  async (req) => {
-    const { pathname } = new URL(req.url)
-
-    if (pathname.endsWith === '/') {
-      return new Response(await Deno.readFile(join(pathname, '/index.html')))
-    }
-    return serveDir(req, { fsRoot: staticPath })
-  },
-  { port: 3000 }
-)
+await app.listen({ port: 8000 });
