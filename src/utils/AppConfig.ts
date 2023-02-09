@@ -5,4 +5,4 @@ export const AppConfig = {
   author: 'Emma',
   locale_region: 'en-us',
   locale: 'en',
-};
+}

@@ -4,7 +4,7 @@ import {
   Project,
   Section,
   Tags,
-} from 'astro-boilerplate-components';
+} from 'astro-boilerplate-components'
 
 const ProjectList = () => (
   <Section
@@ -66,6 +66,6 @@ const ProjectList = () => (
       />
     </div>
   </Section>
-);
+)
 
-export { ProjectList };
+export { ProjectList }
