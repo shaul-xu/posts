@@ -23,8 +23,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: modules-${{pnpm-lock.yaml}}
-      
+          key: modules-${{ hashFiles('pnpm-lock.yaml') }}
+
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install
