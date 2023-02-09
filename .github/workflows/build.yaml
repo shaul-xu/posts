@@ -13,11 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-
       - name: Setup Node.js enviroment
         uses: actions/setup-node@v3
         with:
@@ -28,14 +23,14 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ./node_modules
-          key: modules-${{ hashFiles('pnpm-lock.yaml') }}
+          key: modules-${{ hashFiles('yarn.lock') }}
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: pnpm install
+        run: yarn install
       
       - name: Build
-        run: pnpm run build
+        run: yarn build
 
       - name: Push dist to release branch
         uses: ad-m/github-push-action@master
