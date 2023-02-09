@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.xuyx.site/sitemap-index.xml
