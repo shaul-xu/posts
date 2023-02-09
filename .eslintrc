@@ -6,7 +6,8 @@
       "error",
       {
         "singleQuote": true,
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "semi": false
       }
     ]
   },
@@ -24,7 +25,8 @@
           "error",
           {
             "singleQuote": true,
-            "endOfLine": "auto"
+            "endOfLine": "auto",
+            "semi": false
           }
         ],
         "import/no-extraneous-dependencies": "off", // mjs is only used by Astro for configuration, false positive
@@ -54,7 +56,8 @@
           "error",
           {
             "singleQuote": true,
-            "endOfLine": "auto"
+            "endOfLine": "auto",
+            "semi": false
           }
         ],
         "import/extensions": [

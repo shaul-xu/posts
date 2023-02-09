@@ -1,6 +1,6 @@
-import rss from '@astrojs/rss';
+import rss from '@astrojs/rss'
 
-import { AppConfig } from '@/utils/AppConfig';
+import { AppConfig } from '@/utils/AppConfig'
 
 export const get = () =>
   rss({
@@ -17,4 +17,4 @@ export const get = () =>
     items: import.meta.glob('./**/*.md'),
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
-  });
+  })
