@@ -27,7 +27,7 @@ export default defineConfig({
     react(),
     tailwind({}),
     sitemap(),
-    robotsTxt(),
+    robotsTxt({ sitemapBaseFileName: 'sitemap' }),
     astroImageTools,
   ],
 })
