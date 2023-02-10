@@ -35,7 +35,9 @@ jobs:
         run: pnpm install
       
       - name: Build
-        run: pnpm run build
+        run: |
+          pnpm run build
+          cat ./denoDeployScript.txt > dist/main.ts
 
       - name: Push dist to release branch
         uses: s0/git-publish-subdir-action@develop
