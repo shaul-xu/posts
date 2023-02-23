@@ -1,9 +1,4 @@
-import {
-  GradientText,
-  HeroAvatar,
-  HeroSocial,
-  Section,
-} from 'astro-boilerplate-components'
+import { GradientText, HeroAvatar, Section } from 'astro-boilerplate-components'
 
 const Hero = () => (
   <Section>
@@ -15,15 +10,16 @@ const Hero = () => (
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
+          An ordinary programmer, very interested in{' '}
+          <a
+            className="text-cyan-400 hover:underline"
+            href="https://reactjs.org/"
+            target="_blank"
+          >
+            React
           </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          and <span className="text-cyan-400">DevOps</span>, dedicated to
+          becoming an excellent programmer.
         </>
       }
       avatar={
@@ -35,32 +31,33 @@ const Hero = () => (
         />
       }
       socialButtons={
-        <>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/twitter-icon.png"
-              alt="Twitter icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/facebook-icon.png"
-              alt="Facebook icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/linkedin-icon.png"
-              alt="Linkedin icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/youtube-icon.png"
-              alt="Youtube icon"
-            />
-          </a>
-        </>
+        null
+        // <>
+        //   <a href="/">
+        //     <HeroSocial
+        //       src="/assets/images/twitter-icon.png"
+        //       alt="Twitter icon"
+        //     />
+        //   </a>
+        //   <a href="/">
+        //     <HeroSocial
+        //       src="/assets/images/facebook-icon.png"
+        //       alt="Facebook icon"
+        //     />
+        //   </a>
+        //   <a href="/">
+        //     <HeroSocial
+        //       src="/assets/images/linkedin-icon.png"
+        //       alt="Linkedin icon"
+        //     />
+        //   </a>
+        //   <a href="/">
+        //     <HeroSocial
+        //       src="/assets/images/youtube-icon.png"
+        //       alt="Youtube icon"
+        //     />
+        //   </a>
+        // </>
       }
     />
   </Section>
